@@ -47,6 +47,7 @@ pipeline {
                 sh """
                    echo 'hwre is dhell'
                 echo '$GREETINGS'
+                echo 'printed'
                 """
             }
         }

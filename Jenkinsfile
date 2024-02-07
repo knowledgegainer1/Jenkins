@@ -29,7 +29,7 @@ pipeline {
                 echo 'Testing..'
             }
         }
-         stage('Example') {
+        stage('Example') {
             steps {
                 echo "Hello ${params.PERSON}"
 
@@ -41,6 +41,7 @@ pipeline {
 
                 echo "Password: ${params.PASSWORD}"
             }
+        }
         stage('Deploy') {
             steps {
                 sh """
@@ -56,4 +57,4 @@ pipeline {
         }
     }
 }
-}
+

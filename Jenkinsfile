@@ -3,8 +3,9 @@ pipeline {
         node {
             label 'Agent1' // Corrected syntax: 'label' instead of '='
         }
-        envionment {
-            GREETINGS ='hello worls'        }
+    envionment {
+            GREETINGS = 'hello worls'        
+        }
     }
     stages {
         stage('Build') {
@@ -26,8 +27,8 @@ pipeline {
         }
     }
     post {
-        always{
-            echo "will run"
+        always {
+            echo 'will run'
         }
     }
 }

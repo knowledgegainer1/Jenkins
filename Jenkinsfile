@@ -3,11 +3,10 @@ pipeline {
         node {
             label 'Agent1' // Corrected syntax: 'label' instead of '='
         }
-   
     }
-    envionment {
-            GREETINGS = 'hello worls'        
-        }
+    environment {
+            GREETINGS = 'hello worls'
+    }
     stages {
         stage('Build') {
             steps {

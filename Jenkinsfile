@@ -22,6 +22,7 @@ pipeline {
             steps {
                 sh """
                    echo 'hwre is dhell'
+                   env
                 """
             }
         }

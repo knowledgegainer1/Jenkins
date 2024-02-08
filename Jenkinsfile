@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-            label 'Agent1' // Corrected syntax: 'label' instead of '='
+            label 'AGENT-1' // Corrected syntax: 'label' instead of '='
         }
     }
     environment {
@@ -38,8 +38,6 @@ pipeline {
                 echo "Toggle: ${params.TOGGLE}"
 
                 echo "Choice: ${params.CHOICE}"
-
-               
             }
         }
         stage('Deploy') {

@@ -5,7 +5,7 @@ pipeline {
         }
     }
     environment {
-            GREETINGS = 'hello worls'
+            GREETINGS = 'hello world'
     }
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
@@ -43,8 +43,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh """
-                   echo 'hwre is dhell'
+                   echo 'here is hell'
                 echo '$GREETINGS'
+                env
                 echo 'printed'
                 """
             }
@@ -53,6 +54,12 @@ pipeline {
     post {
         always {
             echo 'will run'
+        }
+        failure {
+            echl "I will run on failuer"
+        }
+        success{
+            echo "I will run on scuuess inly"
         }
     }
 }

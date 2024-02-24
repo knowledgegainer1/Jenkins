@@ -7,6 +7,7 @@ pipeline {
     environment {
             GREETINGS = 'hello world'
     }
+    
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 
@@ -47,13 +48,14 @@ pipeline {
                 echo '$GREETINGS'
                 env
                 echo 'printed'
+                sleep 10
                 """
             }
         }
     }
     post {
         always {
-            echo 'will run'
+            echo 'will run always'
         }
         failure {
             echl "I will run on failuer"
